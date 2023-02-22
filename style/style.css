@@ -194,12 +194,15 @@ a {
   .header .menu-icon {
     display: inline-block;
     float: right;
-    padding: 28px 20px;
+    padding: 15px 15px;
     position: sticky;
     user-select: none;
+    border: 1px solid #000;
+    margin: 5px;
+    border-radius: 10%;
   }
   
-  .header .menu-icon .navicon {
+  /* .header .menu-icon .navicon {
     background: #333;
     display: block;
     height: 2px;
@@ -207,8 +210,8 @@ a {
     transition: background .2s ease-out;
     width: 18px;
   }
-  
-  .header .menu-icon .navicon:before,
+   */
+  /* .header .menu-icon .navicon:before,
   .header .menu-icon .navicon:after {
     background: #333;
     content: '';
@@ -217,7 +220,7 @@ a {
     position: sticky;
     transition: all .2s ease-out;
     width: 100%;
-  }
+  } */
   
   .header .menu-icon .navicon:before {
     top: 5px;
@@ -237,17 +240,21 @@ a {
     max-height: 240px;
   }
   
+  .header .menu-btn:checked ~ .menu-icon {
+    background-color: #191919;
+  }
+
   .header .menu-btn:checked ~ .menu-icon .navicon {
-    background: white;
+    color: #ffce00;
   }
   
-  .header .menu-btn:checked ~ .menu-icon .navicon:before {
+  /* .header .menu-btn:checked ~ .menu-icon .navicon:before {
     transform: rotate(-45deg);
   }
   
   .header .menu-btn:checked ~ .menu-icon .navicon:after {
     transform: rotate(45deg);
-  }
+  } */
   
   .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
   .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
@@ -539,7 +546,17 @@ input[type=submit]:hover {
     margin-right: auto;
 }
 
-.visi-title h1,
+.visi-title h1 {
+    font-size: 36px;
+    text-transform: uppercase;
+    background-color: #191919;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    color: #fff;
+    width: 30%;
+    text-align: center;
+}
+
 .misi-title h1 {
     font-size: 36px;
     text-transform: uppercase;
@@ -549,6 +566,7 @@ input[type=submit]:hover {
     color: #fff;
     width: 30%;
     text-align: center;
+    margin-left: auto;
 }
 
 .visi-title p {
@@ -649,5 +667,16 @@ ol {
         font-size: 24px;
         text-align: justify;
         font-weight: bold;
+    }
+    .misi-title h1 {
+        font-size: 36px;
+        text-transform: uppercase;
+        background-color: #191919;
+        border-top-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        color: #fff;
+        width: 30%;
+        text-align: center;
+        margin-left: 0px;
     }
 }
