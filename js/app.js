@@ -18,7 +18,11 @@ function validateForm() {
     }
 
     setSenderUi(date, name, birthDate, gender, messages);
+    
+    var frm = document.getElementsByName("message-form")[0];
+    frm.reset();
     return false;
+
 }
 
 // funsi setRenderUi
